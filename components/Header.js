@@ -242,14 +242,17 @@ export default function Header() {
                                 Logout</motion.a>
                         </Link>
                         <div>
-                            <img src={user.picture} alt="Profile"
+                            <Image src={user.picture} alt="Profile"
                                 className="nav-user-profile rounded-circle"
                                 width="50"
                                 height="50"
                                 decode="async"
                                 data-testid="navbar-picture-desktop" />
                         </div>
-                        <a href="/profile"> Profile</a>
+                        <Link  href="/profile">
+                        
+                        <a> Profile</a>
+                        </Link>
                     </div>
                 </>
             )}
