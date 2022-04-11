@@ -8,16 +8,16 @@ export default function LogoSection() {
 
     return (
 
-        <div className="logoContainer Container">
+        <div className="logoContainer">
             <div className="logoInner">
                 <div className="logoWrap">
-                    <Image src={logo1} alt=""/>
+                    <Image src={logo1} height={150} width={200} alt=""/>
                 </div>
                 <div className="logoWrap">
-                    <Image src={logo2} alt=""/>
+                    <Image src={logo2} height={200} width={400} alt=""/>
                 </div>
                 <div className="logoWrap">
-                    <Image src={logo3} alt=""/>
+                    <Image src={logo3} height={100} width={200} alt=""/>
                 </div>
             </div>
         </div>

@@ -46,7 +46,7 @@ const Hero = () => {
                         alt="hero-img"
                     />
                 </div>
-                hw
+                
             </div>
 
         </div>

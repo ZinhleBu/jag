@@ -1,16 +1,21 @@
+import Image from 'next/image'
 import Link from 'next/link'
+import { useUser } from '@auth0/nextjs-auth0';
+
+const logo = "../jag.png";
+
 export default function Footer() {
-    
+    const { user, isLoading } = useUser();
+
     return (
-        <div className="footerContainer Container">
+        <div className="footerContainer">
             <div className="footerInner">
                 <div className="footerSec">
-                    <img src="../jag.png" alt="" />
+                    <img src={logo} alt="logo1" height={70} width={150}/>
                 </div>
                 <div className="footerSec">
                     <p>Sign up for newsletter</p>
-                </div>
-                <div className="footerSec">
+               
                     <form  action="" method="post">
                         <input className="input" type="email" placeholder="Email address" />
                         <button className="formBtn" type="submit">Send</button>
@@ -26,16 +31,21 @@ export default function Footer() {
                                 <Link href="/">Home</Link>
                             </li>
                             <li>
-                                <Link href="/">About</Link>
+                                <Link href="/about">About</Link>
                             </li>
                             <li>
-                                <Link href="/">Gallery</Link>
+                                <Link href="/gallery">Gallery</Link>
                             </li>
                             <li>
-                                <Link href="/">News</Link>
+                                <Link href="/news">News</Link>
                             </li>
+                            {user &&(
                             <li>
-                                <Link href="/">Contact</Link>
+                                <Link href="/blog">Blog</Link>
+                            </li>
+                            )}
+                            <li>
+                                <Link href="/contact">Contact</Link>
                             </li>
                         </ul>
                     </nav>
@@ -43,9 +53,11 @@ export default function Footer() {
                 <div className="footerSec">
                     <nav>
                         <ul>
+                        {user &&(
                             <li>
-                                <Link href="/">Blog</Link>
+                                <Link href="/blog">Blog</Link>
                             </li>
+                            )}
                             <li>
                                 <Link href="/">Newsletter</Link>
                             </li>

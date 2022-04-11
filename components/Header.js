@@ -8,7 +8,6 @@ import { useUser } from '@auth0/nextjs-auth0';
 const transition = { duration: 1.4, ease: [0.6, 0.01, -0.05, 0.9] };
 
 export default function Header() {
-    const [isOpen, setIsOpen] = useState(false);
     const { user, isLoading } = useUser();
 
 
@@ -130,7 +129,6 @@ export default function Header() {
                         }}
                         href="/api/auth/login"
                         className="signupButton">
-
                         <motion.div
                             key={6}
 
@@ -176,15 +174,9 @@ export default function Header() {
             {user && (
                 <>
                     <div className="logo">
-
-
-                        <Link
-                            href="/api/auth/logout"
-
-                        >
+                        <Link  href="/api/auth/logout">
                             <motion.a
                                 key={13}
-
                                 initial={{
                                     color: "red", top: -100,
                                     transition: { delay: 1.2, duration: 1, ...transition }
@@ -249,7 +241,6 @@ export default function Header() {
                                 </motion.div>
                                 Logout</motion.a>
                         </Link>
-                        <div></div>
                         <div>
                             <img src={user.picture} alt="Profile"
                                 className="nav-user-profile rounded-circle"
@@ -258,6 +249,7 @@ export default function Header() {
                                 decode="async"
                                 data-testid="navbar-picture-desktop" />
                         </div>
+                        <a href="/profile"> Profile</a>
                     </div>
                 </>
             )}
