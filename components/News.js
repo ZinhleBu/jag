@@ -1,16 +1,15 @@
 import { InView } from "react-intersection-observer";
 import { motion } from "framer-motion";
 import Link from 'next/link'
-const transition = { duration: 1.4, ease: [0.6, 0.01, -0.05, 0.9] };
+const transition = { duration: .6, ease: [0.6, 0.01, -0.05, 0.9] };
 
 export default function News() {
 
     return (
-
         <div className="newsContainer Container">
 
             <div className="newsInner">
-                <InView threshold={.5}>
+                <InView threshold={.4}>
                     {({ ref, inView }) => (
                         <div className="newsTitleSec">
                             <motion.h2
@@ -45,9 +44,7 @@ export default function News() {
                                 className="seeMoreButton">
                                 <Link href="/">SEE MORE</Link>
                             </motion.button>
-                            <li class="content__item">
-					<button class="button button--hyperion"><span><span>New page</span></span></button>
-				</li>
+                           
                         </div>
                     )}</InView >
 
@@ -140,12 +137,12 @@ export default function News() {
                                         ref={ref}
                                         initial={{ width: "100%" }}
                                         animate={inView ? { width: "0%", transition: { delay: .4, duration: .4, ...transition } } : { width: "100%", transition: { delay: .4, duration: .4, ...transition } }}
-                                        transition={{ delay: .4 }, { duration: .5 }, { ...transition }}
+                                        transition={({ delay: .4 }, { duration: .5 }, { ...transition })}
                                         exit={{
                                             width: "100%",
                                             transition: { delay: .2, duration: .4, ...transition }
                                         }}
-                                        className="imgAfter"></motion.div>
+                                        className="imgAfter" />
                                     <motion.img
                                         initial={{ scale: 1.2 }}
                                         animate={{
@@ -221,7 +218,7 @@ export default function News() {
                                         ref={ref}
                                         initial={{ width: "100%" }}
                                         animate={inView ? { width: "0%", transition: { delay: .6, duration: .4, ...transition } } : { width: "100%", transition: { delay: .6, duration: .4, ...transition } }}
-                                        transition={{ delay: .6 }, { duration: .5 }, { ...transition }}
+                                        transition={({ delay: .6 }, { duration: .5 }, { ...transition })}
                                         exit={{
                                             width: "100%",
                                             transition: { delay: .2, duration: .4, ...transition }
@@ -296,6 +293,5 @@ export default function News() {
 
             </div>
         </div>
-
-    )
+    );
 }

@@ -1,0 +1,696 @@
+.main {
+    min-width: 100vw;
+    min-height: 100vh;
+    padding: 0rem 0px;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    overflow: auto;
+    -ms-scroll-snap-type: y mandatory;
+    scroll-snap-type: y mandatory;
+}
+
+
+/* Container styles */
+
+.Container {
+    min-height: 100vh;
+    min-width: 100vw;
+    scroll-snap-align: start;
+}
+
+
+/* Header styles */
+
+.header {
+    min-width: 100%;
+    min-height: 100px;
+    padding: 0rem 4rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: fixed;
+    z-index: 10;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.header .logo {
+    min-width: 20%;
+    min-height: 60px;
+    position: relative;
+    left: 0;
+    top: 0;
+}
+
+@media (max-width: 1100px) {
+    .header .logo {
+        min-width: 50%;
+    }
+}
+
+.header .navbar {
+    min-width: 70%;
+    min-height: 100%;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 2rem 1rem;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+}
+
+.header .navbar .ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    min-width: 40%;
+    display: flex;
+    position: relative;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    right: 30%;
+}
+
+@media (max-width: 1100px) {
+    .header .navbar .ul {
+        display: none;
+    }
+}
+
+.header .navbar .ul .li {
+    width: 20%;
+    list-style: none;
+    margin: 0px 2rem;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+
+.header .navbar .ul .li .a {
+    font-size: 14px;
+    font-weight: 100;
+    font-family: "Montserrat";
+    color: #707070;
+    cursor: pointer;
+}
+
+.header .signupButton {
+    min-width: 100px;
+    height: 100%;
+    position: relative;
+    top: -32px;
+    cursor: pointer;
+    padding: 1rem;
+    color: #000;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    overflow: hidden;
+    font-family: "Playfair Display";
+    font-size: 1rem;
+    background-color: red;
+    border: none;
+}
+
+.header .signupButton span {
+    color: #fff;
+}
+
+@media (max-width: 1100px) {
+    .header .signupButton {
+        min-width: 100px;
+    }
+}
+
+.header .signupButton .btnAfter {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    left: 0;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    color: #fff;
+    background-color: black;
+}
+
+
+/* Hero styles */
+
+.heroContainer {
+    min-width: 100%;
+    min-height: 100vh;
+    padding: 150px 0;
+    position: relative;
+    top: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    scroll-snap-align: start;
+}
+
+.heroContainer .heroInner {
+    min-width: 100%;
+    min-height: 100%;
+    padding: 0rem 0;
+    position: relative;
+}
+
+.heroContainer .heroInner .pageTitleContainer {
+    min-width: 100%;
+    min-height: 40%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-bottom: 5%;
+    position: relative;
+}
+
+.heroContainer .heroInner .pageTitleContainer .pageTitleInner {
+    min-width: 100%;
+    min-height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .heroContainer .heroInner .pageTitleContainer .pageTitleInner {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+}
+
+.heroContainer .heroInner .pageTitleContainer .pageTitleInner h1 {
+    font-size: 30px;
+    font-weight: 100;
+    color: #707070;
+}
+
+@media (max-width: 768px) {
+    .heroContainer .heroInner .pageTitleContainer .pageTitleInner h1 {
+        font-size: 25px;
+    }
+}
+
+.heroContainer .heroInner .pageTitleContainer .pageTitleInner span {
+    font-size: 30px;
+    color: red;
+    font-style: italic;
+    margin: 0rem 2rem;
+}
+
+@media (max-width: 768px) {
+    .heroContainer .heroInner .pageTitleContainer .pageTitleInner span {
+        font-size: 25px;
+    }
+}
+
+.heroContainer .heroInner .pageTitleContainer p {
+    font-family: "Montserrat";
+    font-size: 14px;
+    font-weight: 100;
+    color: #707070;
+}
+
+.heroContainer .heroInner .heroImg {
+    min-width: 100%;
+    min-height: 50vh;
+    position: relative;
+    overflow: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+@media (max-width: 1920px) {
+    .heroContainer .heroInner .heroImg img {
+        min-width: 100%;
+    }
+}
+
+.heroContainer .heroInner .heroImg .imgAfter {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    left: 0;
+    background-color: #fff;
+}
+
+
+/* News section */
+
+.newsContainer {
+    min-width: 100%;
+    min-height: 100%;
+    position: relative;
+    padding: 10px 0;
+    top: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+}
+
+.newsContainer .newsInner {
+    min-width: 100%;
+    min-height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 2rem 2rem;
+    position: relative;
+}
+
+@media (max-width: 1440px) {
+    .newsContainer .newsInner {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+}
+
+.newsContainer .newsInner .newsTitleSec {
+    max-height: 30%;
+    min-width: 20%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+}
+
+@media (max-width: 1440px) {
+    .newsContainer .newsInner .newsTitleSec {
+        max-width: 700px;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        margin: 20px 0;
+    }
+}
+
+.newsContainer .newsInner .newsTitleSec .newsTitle {
+    font-family: "Playfair Display";
+    font-size: 2rem;
+    color: #707070;
+    font-weight: 100;
+}
+
+.newsContainer .newsInner .newsTitleSec .newsDescription {
+    font-size: 0.8rem;
+    font-family: "Montserrat";
+    color: #707070;
+    width: 60%;
+    font-weight: 100;
+}
+
+@media (max-width: 1440px) {
+    .newsContainer .newsInner .newsTitleSec {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+.newsContainer .newsInner .newsTitleSec .seeMoreButton {
+    max-width: 80px;
+    border: none;
+    font-family: "Montserrat";
+    color: #707070;
+    background: transparent;
+}
+
+.newsContainer .newsInner .cards {
+    width: 80%;
+    height: 100%;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+@media (max-width: 1440px) {
+    .newsContainer .newsInner .cards {
+        width: 100%;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        margin: 20px 0;
+    }
+}
+
+.newsContainer .newsInner .cards .card {
+    max-width: 350px;
+    height: 100%;
+    margin: 10px 10px;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    overflow: hidden;
+}
+
+@media (max-width: 1440px) {
+    .newsContainer .newsInner .cards .card {
+        max-width: 700px;
+    }
+}
+
+@media (max-width: 1100px) {
+    .newsContainer .newsInner .cards .card {
+        max-width: 280px;
+    }
+}
+
+.newsContainer .newsInner .cards .card .cardImg {
+    min-width: 100%;
+    max-height: 597px;
+    overflow: hidden;
+    position: relative;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.newsContainer .newsInner .cards .card .cardImg .imgAfter {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    left: 0;
+    background-color: #fff;
+}
+
+.newsContainer .newsInner .cards .card .cardImg img {
+    max-height: 600px;
+}
+
+.newsContainer .newsInner .cards .card .cardTitle {
+    font-size: 1.5rem;
+    color: #707070;
+    font-weight: 100;
+}
+
+.newsContainer .newsInner .cards .card .cardDescription {
+    font-family: "Montserrat";
+    color: #707070;
+    font-weight: 100;
+    font-size: 14px;
+}
+
+.newsContainer .newsInner .cards .card .cardCategory {
+    font-family: "Montserrat";
+    color: #707070;
+    font-weight: 100;
+    font-size: 14px;
+}
+
+.newsContainer .newsInner .cards .card .cardDate {
+    font-family: "Montserrat";
+    color: #707070;
+    font-weight: 100;
+    font-size: 14px;
+}
+
+.newsContainer .newsInner .cards .card .line1 {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.newsContainer .newsInner .cards .card .line2 {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.newsContainer .newsInner .cards .card .cardButton {
+    max-width: 100px;
+    border: none;
+    font-family: "Montserrat";
+    color: #707070;
+    background: transparent;
+}
+
+.newsContainer .newsInner .cards .card .cardButton:hover {
+    color: #ff0000;
+}
+
+
+/* Banner styles */
+
+.bannerContainer {
+    min-width: 100%;
+    min-height: 100%;
+    position: relative;
+    padding: 150px 0;
+    top: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    scroll-snap-align: start;
+}
+
+.bannerContainer .bannerInner {
+    min-width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0rem 0;
+    position: relative;
+}
+
+.bannerContainer .bannerInner .bannerAfter {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    left: 0;
+    background-color: #fff;
+}
+
+
+/* Information styles */
+
+.infoContainer {
+    min-width: 100vw;
+    min-height: 100vh;
+    position: relative;
+    background-color: black;
+    padding: 100px 3rem;
+    scroll-snap-align: start;
+}
+
+.infoContainer .infoInner {
+    min-width: 100%;
+    min-height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.infoContainer .infoInner .infoSec1 {
+    width: 30%;
+    height: 100%;
+}
+
+.infoContainer .infoInner .infoSec1 .infoSec1 h1 {
+    font-size: 2rem;
+    font-family: "Playfair Display";
+    font-weight: 100;
+    padding: 50px 0;
+    color: #707070;
+}
+
+.infoContainer .infoInner .infoSec1 .infoSec1 span {
+    font-size: 2rem;
+    font-family: "Playfair Display";
+    font-weight: 100;
+    padding: 50px 0;
+    color: red;
+}
+
+.infoContainer .infoInner .infoSec1 .infoSec1 p {
+    font-size: 15px;
+    font-family: "Montserrat";
+    font-weight: 100;
+    max-width: 400px;
+    padding: 50px 0;
+    color: #707070;
+}
+
+.infoContainer .infoInner .infoSec2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 70%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.infoContainer .infoInner .infoSec2 .imgContainer {
+    max-width: 100%;
+    min-height: 100%;
+    margin: 0rem 1rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.logoContainer {
+    min-width: 100vw;
+    min-height: 100vh;
+    position: relative;
+    padding: 100px 3rem;
+    scroll-snap-align: start;
+}
+
+.logoContainer .logoInner {
+    min-width: 100%;
+    min-height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+
+/*# sourceMappingURL=Home.css.map */
