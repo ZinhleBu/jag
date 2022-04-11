@@ -4,11 +4,15 @@ import Image from 'next/image'
 import Link from 'next/link'
 import logo from '../public/jag.png'
 import { useUser } from '@auth0/nextjs-auth0';
+
 const transition = { duration: 1.4, ease: [0.6, 0.01, -0.05, 0.9] };
 
 export default function Header() {
+    const [isOpen, setIsOpen] = useState(false);
     const { user, isLoading } = useUser();
-
+    const toggle = () => setIsOpen(!isOpen);
+  
+  
     return (
 
         <div className="header">

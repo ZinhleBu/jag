@@ -81,7 +81,7 @@
                 top: -32px;
                 cursor: pointer;
                 padding: 1rem;
-                color: red;
+                color: #fff;
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -91,7 +91,7 @@
                 background-color: red;
                 border: none;
                 @media (max-width: $breakpoint-menu) {
-                    display: none;
+                    min-width: 100%;
                 }
                 .btnAfter {
                     width: 100%;
