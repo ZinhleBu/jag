@@ -14,7 +14,6 @@ import LogoSection from '../components/LogoSection'
 export default function Home() {
 
   return (
-
     <Fragment>
       <Head>
         <title>JAG </title>
@@ -22,19 +21,12 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <AnimatePresence >
-
-        <Hero
-        />
-        <News
-        />
-        <Banner
-        />
-        <Info
-        />
-        <LogoSection
-        />
+        <Hero />
+        <News />
+        <Banner />
+        <Info />
+        <LogoSection />
       </AnimatePresence >
-
     </Fragment>
   )
 }
