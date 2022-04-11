@@ -24,6 +24,8 @@ export default function Home() {
       </Head>
       <AnimatePresence exitBeforeEnter>
         <motion.main
+                key={21}
+
           initial={{ opacity: 0 }}
           animate={{
             opacity: 1,

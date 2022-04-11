@@ -10,6 +10,7 @@ function MyApp({ Component, pageProps }) {
     <UserProvider>
       <AnimatePresence exitBeforeEnter>
         <motion.div
+        key={1}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }
           }

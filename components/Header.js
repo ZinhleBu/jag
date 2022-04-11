@@ -10,13 +10,14 @@ const transition = { duration: 1.4, ease: [0.6, 0.01, -0.05, 0.9] };
 export default function Header() {
     const [isOpen, setIsOpen] = useState(false);
     const { user, isLoading } = useUser();
-    const toggle = () => setIsOpen(!isOpen);
-  
-  
+
+
     return (
 
         <div className="header">
             <motion.div
+                key={2}
+
                 initial={{ top: -100 }}
                 animate={{
                     top: 0,
@@ -36,6 +37,8 @@ export default function Header() {
             </motion.div>
             <div className="navbar">
                 <motion.div
+                    key={3}
+
                     initial={{ opacity: 0 }}
                     animate={{
                         opacity: 1,
@@ -48,10 +51,10 @@ export default function Header() {
                     className="ul">
 
                     <li className="li">
-                        <Link href="/" title="">
-
+                        <Link href="/" title="" passHref>
                             <motion.a
-                                href="/"
+                                key={4}
+
                                 whileHover={{
                                     color: "red"
 
@@ -94,7 +97,7 @@ export default function Header() {
 
                                 </Link>
                             </li>
-                           
+
                         </>
                     )}
 
@@ -107,6 +110,8 @@ export default function Header() {
 
                     href="/api/auth/login">
                     <motion.a
+                        key={5}
+
                         initial={{
                             color: "red", top: -100,
                             transition: { delay: 1.2, duration: 1, ...transition }
@@ -127,6 +132,8 @@ export default function Header() {
                         className="signupButton">
 
                         <motion.div
+                            key={6}
+
                             initial={{
                                 x: "-110%",
                                 skew: "0deg",
@@ -152,86 +159,107 @@ export default function Header() {
                                 transition: { delay: .2, duration: .4, ...transition }
                             }}
                             className="btnAfter">
-                            <motion.span >L</motion.span>
-                            <motion.span >o</motion.span>
-                            <motion.span >g</motion.span>
-                            <motion.span >i</motion.span>
-                            <motion.span >n</motion.span>
+                            <motion.span key={7}
+                            >L</motion.span>
+                            <motion.span key={8}
+                            >o</motion.span>
+                            <motion.span key={9}
+                            >g</motion.span>
+                            <motion.span key={10}
+                            >i</motion.span>
+                            <motion.span key={11}
+                            >n</motion.span>
                         </motion.div>
                         Login</motion.a>
                 </Link>
             )}
             {user && (
-                <><Link
-                    href="/api/auth/logout"
+                <>
+                    <div className="logo">
 
-                >
-                    <motion.a
-                        initial={{
-                            color: "red", top: -100,
-                            transition: { delay: 1.2, duration: 1, ...transition }
-                        }}
-                        animate={{
-                            color: "black", top: -0,
-                            transition: { delay: 1.2, duration: 1, ...transition }
-                        }}
-                        exit={{
-                            color: "red", opacity: 0, top: -100,
-                            transition: { delay: .2, duration: .4, ...transition }
-                        }}
-                        whileHover={{
-                            color: "black",
-                            transition: { delay: .1, duration: .2, ...transition }
-                        }}
-                        href="/api/auth/logout"
-                        className="signupButton">
 
-                        <motion.div
-                            initial={{
-                                x: "-110%",
-                                skew: "0deg",
-                                transition: { delay: .2, duration: .4, ...transition }
-                            }}
-                            animate={{
-                                x: "0%",
-                                skew: "0deg",
+                        <Link
+                            href="/api/auth/logout"
 
-                                transition: {
-                                    delay: .2, duration: 1,
-                                    ...transition
-                                }
-                            }}
-                            exit={{
-                                x: "-110%",
-                                skew: "10deg",
+                        >
+                            <motion.a
+                                key={13}
 
-                                transition: { delay: .2, duration: .4, ...transition }
-                            }}
-                            whileHover={{
-                                x: "-110%",
-                                skew: "10deg",
-                                transition: { delay: .2, duration: .4, ...transition }
-                            }}
-                            className="btnAfter">
-                            <motion.span>L</motion.span>
-                            <motion.span>o</motion.span>
-                            <motion.span>g</motion.span>
-                            <motion.span>o</motion.span>
-                            <motion.span>u</motion.span>
-                            <motion.span>t</motion.span>
+                                initial={{
+                                    color: "red", top: -100,
+                                    transition: { delay: 1.2, duration: 1, ...transition }
+                                }}
+                                animate={{
+                                    color: "black", top: -0,
+                                    transition: { delay: 1.2, duration: 1, ...transition }
+                                }}
+                                exit={{
+                                    color: "red", opacity: 0, top: -100,
+                                    transition: { delay: .2, duration: .4, ...transition }
+                                }}
+                                whileHover={{
+                                    color: "black",
+                                    transition: { delay: .1, duration: .2, ...transition }
+                                }}
+                                href="/api/auth/logout"
+                                className="signupButton">
 
-                        </motion.div>
-                        Logout</motion.a>
-                </Link>
-                    <div></div>
-                    <div>
-                        <img src={user.picture} alt="Profile"
-                            className="nav-user-profile rounded-circle"
-                            width="50"
-                            height="50"
-                            decode="async"
-                            data-testid="navbar-picture-desktop" />
-                    </div></>
+                                <motion.div
+                                    key={14}
+
+                                    initial={{
+                                        x: "-110%",
+                                        skew: "0deg",
+                                        transition: { delay: .2, duration: .4, ...transition }
+                                    }}
+                                    animate={{
+                                        x: "0%",
+                                        skew: "0deg",
+
+                                        transition: {
+                                            delay: .2, duration: 1,
+                                            ...transition
+                                        }
+                                    }}
+                                    exit={{
+                                        x: "-110%",
+                                        skew: "10deg",
+
+                                        transition: { delay: .2, duration: .4, ...transition }
+                                    }}
+                                    whileHover={{
+                                        x: "-110%",
+                                        skew: "10deg",
+                                        transition: { delay: .2, duration: .4, ...transition }
+                                    }}
+                                    className="btnAfter">
+                                    <motion.span key={15}
+                                    >L</motion.span>
+                                    <motion.span key={16}
+                                    >o</motion.span>
+                                    <motion.span key={17}
+                                    >g</motion.span>
+                                    <motion.span key={18}
+                                    >o</motion.span>
+                                    <motion.span key={19}
+                                    >u</motion.span>
+                                    <motion.span key={20}
+                                    >t</motion.span>
+
+                                </motion.div>
+                                Logout</motion.a>
+                        </Link>
+                        <div></div>
+                        <div>
+                            <img src={user.picture} alt="Profile"
+                                className="nav-user-profile rounded-circle"
+                                width="50"
+                                height="50"
+                                decode="async"
+                                data-testid="navbar-picture-desktop" />
+                        </div>
+                    </div>
+                </>
             )}
         </div>
     )

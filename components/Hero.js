@@ -14,32 +14,39 @@ const Hero = () => {
             <div className="heroInner">
                 <PageTitle />
                 <div className="heroImg">
-                    <motion.div 
-                    initial={{ width: "100%" }}
-                    animate={{ width: "0%",
-                    transition: { delay: 0, duration: .4, ...transition }
-                   }}
-                    exit={{width: "100%",
-                    transition: { delay: 0, duration: .4, ...transition }
-                   }}
-                    className="imgAfter"></motion.div>
-                    <motion.img 
-                      initial={{ scale: 1.2 }}
-                      animate={{ scale: 1,
-                      transition: { delay: .4, duration: .5, ...transition }
-                     }}
-                      exit={{scale: 1.2,
-                      transition: { delay: .4, duration: .5, ...transition }
-                     }}
-                     whileHover={{ scale: 1.2,
-                        transition: { delay: .4, duration: .5, ...transition }
+                    <motion.div
+                        key={22}
+                        initial={{ width: "100%" }}
+                        animate={{
+                            width: "0%",
+                            transition: { delay: 0, duration: .4, ...transition }
+                        }}
+                        exit={{
+                            width: "100%",
+                            transition: { delay: 0, duration: .4, ...transition }
+                        }}
+                        className="imgAfter"></motion.div>
+                    <motion.img
+                        key={23}
+                        initial={{ scale: 1.2 }}
+                        animate={{
+                            scale: 1,
+                            transition: { delay: .4, duration: .5, ...transition }
+                        }}
+                        exit={{
+                            scale: 1.2,
+                            transition: { delay: .4, duration: .5, ...transition }
+                        }}
+                        whileHover={{
+                            scale: 1.2,
+                            transition: { delay: .4, duration: .5, ...transition }
 
-                    }}
-                     
-                    src="../hero-img.webp"
-                        alt=""
-                         />
+                        }}
+                        src="../hero-img.webp"
+                        alt="hero-img"
+                    />
                 </div>
+                hw
             </div>
 
         </div>
