@@ -4,7 +4,6 @@ import Footer from '../components/Footer'
 import Head from 'next/head'
 
 import { AnimatePresence, motion } from 'framer-motion'
-import Header from '../components/Header';
 
 export default function Blog({ user }) {
     return (

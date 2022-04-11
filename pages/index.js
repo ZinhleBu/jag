@@ -9,7 +9,6 @@ import News from '../components/News'
 import Banner from '../components/Banner'
 import Info from '../components/Info'
 import LogoSection from '../components/LogoSection'
-import Footer from '../components/Footer'
 
 
 export default function Home() {
