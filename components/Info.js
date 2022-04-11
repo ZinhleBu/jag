@@ -26,71 +26,72 @@ export default function Info() {
                         of the leading artists in the country
                     </p>
 
-                        <Link
-className="infoButton"
-                            href="/api/auth/login">
-                            <motion.a
-                                key={5}
+                    <Link
+                        className="infoButton"
+                        href="/api/auth/login"
+                        passHref>
+                        <motion.a
+                            key={5}
+
+                            initial={{
+                                color: "red", top: -100,
+                                transition: { delay: 1.2, duration: 1, ...transition }
+                            }}
+                            animate={{
+                                color: "black", top: -0,
+                                transition: { delay: 1.2, duration: 1, ...transition }
+                            }}
+                            exit={{
+                                color: "red", opacity: 0, top: -100,
+                                transition: { delay: .2, duration: .4, ...transition }
+                            }}
+                            whileHover={{
+                                color: "black",
+                                transition: { delay: .1, duration: .2, ...transition }
+                            }}
+                            href="/api/auth/login"
+                            className="signupButton">
+
+                            <motion.div
+                                key={6}
 
                                 initial={{
-                                    color: "red", top: -100,
-                                    transition: { delay: 1.2, duration: 1, ...transition }
+                                    x: "-110%",
+                                    skew: "0deg",
+                                    transition: { delay: .2, duration: .4, ...transition }
                                 }}
                                 animate={{
-                                    color: "black", top: -0,
-                                    transition: { delay: 1.2, duration: 1, ...transition }
-                                }}
-                                exit={{
-                                    color: "red", opacity: 0, top: -100,
+                                    x: "0%",
+                                    skew: "0deg",
+
+                                    transition: {
+                                        delay: .2, duration: 1,
+                                        ...transition
+                                    }
+                                }} exit={{
+                                    x: "-110%",
+                                    skew: "10deg",
+
                                     transition: { delay: .2, duration: .4, ...transition }
                                 }}
                                 whileHover={{
-                                    color: "black",
-                                    transition: { delay: .1, duration: .2, ...transition }
+                                    x: "-110%",
+                                    skew: "10deg",
+                                    transition: { delay: .2, duration: .4, ...transition }
                                 }}
-                                href="/api/auth/login"
-                                className="signupButton">
+                                className="btnAfter">
+                                <motion.span key={7}
+                                >J</motion.span>
+                                <motion.span key={8}
+                                >o</motion.span>
+                                <motion.span key={9}
+                                >i</motion.span>
+                                <motion.span key={10}
+                                >n</motion.span>
 
-                                <motion.div
-                                    key={6}
-
-                                    initial={{
-                                        x: "-110%",
-                                        skew: "0deg",
-                                        transition: { delay: .2, duration: .4, ...transition }
-                                    }}
-                                    animate={{
-                                        x: "0%",
-                                        skew: "0deg",
-
-                                        transition: {
-                                            delay: .2, duration: 1,
-                                            ...transition
-                                        }
-                                    }} exit={{
-                                        x: "-110%",
-                                        skew: "10deg",
-
-                                        transition: { delay: .2, duration: .4, ...transition }
-                                    }}
-                                    whileHover={{
-                                        x: "-110%",
-                                        skew: "10deg",
-                                        transition: { delay: .2, duration: .4, ...transition }
-                                    }}
-                                    className="btnAfter">
-                                    <motion.span key={7}
-                                    >J</motion.span>
-                                    <motion.span key={8}
-                                    >o</motion.span>
-                                    <motion.span key={9}
-                                    >i</motion.span>
-                                    <motion.span key={10}
-                                    >n</motion.span>
-
-                                </motion.div>
-                                Join</motion.a>
-                        </Link>
+                            </motion.div>
+                            Join</motion.a>
+                    </Link>
 
                 </section>
                 <section className="infoSec2">

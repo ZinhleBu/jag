@@ -11,7 +11,7 @@ export default function Footer() {
         <div className="footerContainer">
             <div className="footerInner">
                 <div className="footerSec">
-                    <img src={logo} alt="logo1" height={70} width={150}/>
+                    <Image src={logo} alt="logo1" height={70} width={150}/>
                 </div>
                 <div className="footerSec">
                     <p>Sign up for newsletter</p>

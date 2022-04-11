@@ -107,7 +107,8 @@ export default function Header() {
             {!isLoading && !user && (
                 <Link
 
-                    href="/api/auth/login">
+                    href="/api/auth/login"
+                    passHref>
                     <motion.a
                         key={5}
 
@@ -174,7 +175,7 @@ export default function Header() {
             {user && (
                 <>
                     <div className="logo">
-                        <Link  href="/api/auth/logout">
+                        <Link  href="/api/auth/logout" passHref>
                             <motion.a
                                 key={13}
                                 initial={{
