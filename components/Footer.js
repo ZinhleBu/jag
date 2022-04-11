@@ -2,7 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useUser } from '@auth0/nextjs-auth0';
 
-const logo = "../jag.png";
+const logo = "/jag.png";
 
 export default function Footer() {
     const { user, isLoading } = useUser();
@@ -11,12 +11,12 @@ export default function Footer() {
         <div className="footerContainer">
             <div className="footerInner">
                 <div className="footerSec">
-                    <Image src={logo} alt="logo1" height={70} width={150}/>
+                    <Image src={logo} alt="logo1" height={70} width={150} />
                 </div>
                 <div className="footerSec">
                     <p>Sign up for newsletter</p>
-               
-                    <form  action="" method="post">
+
+                    <form action="" method="post">
                         <input className="input" type="email" placeholder="Email address" />
                         <button className="formBtn" type="submit">Send</button>
                     </form>
@@ -27,43 +27,61 @@ export default function Footer() {
                 <div className="footerSec">
                     <nav>
                         <ul>
-                            <li>
-                                <Link href="/">Home</Link>
-                            </li>
-                            <li>
-                                <Link href="/about">About</Link>
-                            </li>
-                            <li>
-                                <Link href="/gallery">Gallery</Link>
-                            </li>
-                            <li>
-                                <Link href="/news">News</Link>
-                            </li>
-                            {user &&(
-                            <li>
-                                <Link href="/blog">Blog</Link>
-                            </li>
+                            {user && (
+                                <><li>
+                                    <Link href="/">Home</Link>
+                                </li><li>
+                                        <Link href="/about">About</Link>
+                                    </li><li>
+                                        <Link href="/gallery">Gallery</Link>
+                                    </li><li>
+                                        <Link href="/news">News</Link>
+                                    </li><li>
+                                        <Link href="/blog">Blog</Link>
+                                    </li><li>
+                                        <Link href="/contact">Contact</Link>
+                                    </li>
+                                </>
                             )}
-                            <li>
-                                <Link href="/contact">Contact</Link>
-                            </li>
+                            {!isLoading && !user && (
+                                <><li>
+                                    <Link href="/">Home</Link>
+                                </li><li>
+                                        <Link href="/about">About</Link>
+                                    </li><li>
+                                        <Link href="/gallery">Gallery</Link>
+                                    </li><li>
+                                        <Link href="/news">News</Link>
+                                    </li><li>
+                                        <Link href="/contact">Contact</Link>
+                                    </li>
+                                </>
+                            )}
                         </ul>
                     </nav>
                 </div>
                 <div className="footerSec">
                     <nav>
                         <ul>
-                        {user &&(
-                            <li>
-                                <Link href="/blog">Blog</Link>
-                            </li>
+                            {user && (
+                                <>
+                                    <li>
+                                        <Link href="/blog">Blog</Link>
+                                    </li><li>
+                                        <Link href="/">Newsletter</Link>
+                                    </li><li>
+                                        <Link href="/">Privacy Policy</Link>
+                                    </li></>
                             )}
-                            <li>
-                                <Link href="/">Newsletter</Link>
-                            </li>
-                            <li>
-                                <Link href="/">Privacy Policy</Link>
-                            </li>
+                            {!isLoading && !user && (
+                                <>
+                                    <li>
+                                        <Link href="/">Newsletter</Link>
+                                    </li><li>
+                                        <Link href="/">Privacy Policy</Link>
+                                    </li>
+                                </>
+                            )}
                         </ul>
                     </nav>
                 </div>
